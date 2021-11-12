@@ -1,17 +1,20 @@
 class Walk {
     constructor(pos, size, color) {
-      this.x = pos.x;
-      this.y = pos.y;
+      this.pos = pos;
+      this.vel = createVector(1,-1)
       this.size = size;
       this.colorh = color.x;
       this.colorb = color.y;
     }
   
     move() {
-      this.x = this.x + random(-1,1);
-      this.y = this.y + random(-1,1);
+
+      this.pos.add(this.vel);
+      // does the same thing
+      // this.pos.x = this.pos.x + this.vel.x;
+      // this.pos.y = this.pos.y + this.vel.y;
   
       fill(this.colorh, this.colorb / 2, this.colorb, 0.5);
-      ellipse(this.x, this.y, this.size, this.size);
+      ellipse(this.pos.x, this.pos.y, this.size, this.size);
     }
   }

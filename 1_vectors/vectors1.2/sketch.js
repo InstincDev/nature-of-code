@@ -5,7 +5,7 @@ function setup() {
   ellipseMode(CENTER);
   colorMode(HSB);
   noStroke();
-  background(51);
+  
   walker.push(new Walk(createVector(10, 10), 25, createVector(250, 100)));
   walker.push(
     new Walk(createVector(width - 10, 10), 25, createVector(150, 100))
@@ -19,6 +19,7 @@ function setup() {
 }
 
 function draw() {
+  background(51);
   for (let i = 0; i < walker.length; i++) {
     let walk = walker[i];
     walk.move();
