@@ -19,7 +19,7 @@ class Mover {
       // copy the velocity vector
       let friction = this.vel.copy()
       // normalize it
-      friction.normalize;
+      friction.normalize();
       // reverse the direction
       friction.mult(-1);
 
