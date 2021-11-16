@@ -3,7 +3,7 @@ let angle = 0;
 // angles acceleration
 let angleA = 0.001;
 // angle velocity
-let angleV =0;
+let angleV =0.1;
 function setup() {
   createCanvas(400, 400);
   rectMode(CENTER);
