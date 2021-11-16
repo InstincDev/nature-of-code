@@ -14,7 +14,7 @@ class Attractor{
         let distanceSq = constrain(force.magSq(), 125,2500);
 
         // gravitational constant
-        let G = 0.1;
+        let G = 1;
         // strangth of the gravitational force
         let strength = G * (this.mass * mover.mass) / distanceSq; 
         // set force to the strength of the gravitational force

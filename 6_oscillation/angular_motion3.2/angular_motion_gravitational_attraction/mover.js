@@ -2,14 +2,15 @@ class Mover {
   constructor(pos, color, mass) {
     this.pos = pos;
     this.vel = p5.Vector.random2D();
+    this.vel.mult(5);
     this.acc = createVector(0,0);
     this.mass = mass;
     this.size = sqrt(this.mass)*2;
     this.colorh = color.x;
     this.colorb = color.y;
     this.angle = 0;
-    this.angleV = 0.01;
-    this.angleA = 0.01;
+    this.angleV = 0.02;
+    this.angleA = 0;
   }
 
   applyForce(force){
@@ -28,7 +29,7 @@ class Mover {
     // apply velocity to the pos
     this.pos.add(this.vel);
   //  set angle acc to acc of pos x 
-    this.angleA = this.acc.y/50;
+    this.angleA = this.acc.x/50;
 
 
     // velocity to acceleration
